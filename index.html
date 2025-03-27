@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <!-- Meta tag untuk karakter set dan viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Judul halaman -->
+    <title>Katik Kalkulator Matematik</title>
+
+    <!-- Link ke Tailwind CSS untuk styling -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Link ke Font Awesome untuk ikon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <!-- Link ke Google Fonts untuk font Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Link ke stylesheet eksternal untuk styling tambahan -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="bg-gray-100 font-roboto">
+    <!-- Header bagian atas halaman -->
+    <header class="bg-blue-500 text-white text-center py-4">
+        <h1 class="text-4xl font-bold">Katik</h1>
+        <p class="text-xl typing inline-block">Kalkulator Matematik</p>
+    </header>
+
+    <!-- Bagian utama konten -->
+    <main class="max-w-3xl mx-auto bg-white shadow-md mt-6 p-6 rounded-lg">
+        <h2 class="text-2xl font-bold text-center">Welcome to Katik</h2>
+        <p class="text-center mt-2">
+            Hai Sobat, Selamat datang di Katik :)
+            <br />
+            Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar
+        </p>
+
+        <!-- Tombol untuk memilih bangun datar -->
+        <div class="flex justify-center mt-4">
+            <button id="persegiSectionButton"
+                class="bg-blue-500 text-white px-4 py-2 rounded-md mr-2 nav-button active hover-effect click-effect button-transition"
+                onclick="showSection('persegiSection'); addClickAnimation(event); swapButtonColors()">Persegi</button>
+            <button id="persegiPanjangSectionButton"
+                class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md nav-button inactive hover-effect click-effect button-transition"
+                onclick="showSection('persegiPanjangSection'); addClickAnimation(event); swapButtonColors()">P. Panjang</button>
+        </div>
+
+        <!-- Bagian untuk menghitung luas dan keliling persegi -->
+        <section class="section slide-in" id="persegiSection">
+            <div class="bg-blue-500 text-white text-center py-6 mt-6 rounded-t-lg">
+                <h3 class="text-xl font-bold">Luas Persegi</h3>
+            </div>
+            <div class="bg-white p-6 border border-t-0 border-blue-500 rounded-b-lg">
+                <div class="flex justify-center">
+                    <img alt="Persegi dengan sudut A, B, C dan D" class="mb-4" height="150" src="/assets/persegi.jpg" width="150" />
+                </div>
+                <p>Rumus Luas Persegi yaitu :</p>
+                <p class="font-bold mt-2 fade-in text-center">L = S x S</p>
+                <p class="mt-2">Di mana :</p>
+                <p>
+                    L = Luas
+                    <br />
+                    S = Sisi
+                </p>
+            </div>
+            <div class="bg-gray-100 p-6 mt-6 rounded-lg">
+                <h3 class="text-xl font-bold text-center">Hitung Luas Persegi</h3>
+                <div class="flex justify-center mt-4">
+                    <div class="w-full max-w-xs">
+                        <label for="sideInput" class="block text-sm font-medium text-gray-700">Nilai Sisi</label>
+                        <input id="sideInput" class="border border-gray-300 rounded-md px-4 py-2 w-full" placeholder="Nilai Sisi" type="text" oninput="validateInput(event)" />
+                        <div class="error-message"></div>
+                        <div id="areaResult" class="mt-4 text-left"></div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-4">
+                    <button onclick="calculateArea(); addClickAnimation(event)" class="bg-blue-500 text-white px-4 py-2 rounded-md mr-2 hover-effect click-effect button-transition">Hitung</button>
+                    <button onclick="resetForm(); addClickAnimation(event)" class="bg-yellow-500 text-white px-4 py-2 rounded-md hover-effect click-effect button-transition">Reset</button>
+                </div>
+            </div>
+            <hr class="my-8 border-t-2 border-gray-300">
+            <div class="bg-blue-500 text-white text-center py-6 mt-6 rounded-t-lg">
+                <h3 class="text-xl font-bold">Keliling Persegi</h3>
+            </div>
+            <div class="bg-white p-6 border border-t-0 border-blue-500 rounded-b-lg">
+                <div class="flex justify-center">
+                    <img alt="Persegi dengan sudut A, B, C, dan D" class="mb-4" height="150" src="/assets/persegi.jpg" width="150" />
+                </div>
+                <p>Rumus Keliling Persegi yaitu :</p>
+                <p class="font-bold mt-2 fade-in text-center">K = 4 x S</p>
+                <p class="mt-2">Di mana :</p>
+                <p>
+                    K = Keliling
+                    <br />
+                    S = Sisi
+                </p>
+            </div>
+            <div class="bg-gray-100 p-6 mt-6 rounded-lg">
+                <h3 class="text-xl font-bold text-center">Hitung Keliling Persegi</h3>
+                <div class="flex justify-center mt-4">
+                    <div class="w-full max-w-xs">
+                        <label for="sideInputPerimeter" class="block text-sm font-medium text-gray-700">Nilai Sisi</label>
+                        <input id="sideInputPerimeter" class="border border-gray-300 rounded-md px-4 py-2 w-full" placeholder="Nilai Sisi" type="text" oninput="validateInput(event)" />
+                        <div class="error-message"></div>
+                        <div id="perimeterResult" class="mt-4 text-left"></div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-4">
+                    <button onclick="calculatePerimeter(); addClickAnimation(event)" class="bg-blue-500 text-white px-4 py-2 rounded-md mr -2 hover-effect click-effect button-transition">Hitung</button>
+                    <button onclick="resetForm(); addClickAnimation(event)" class="bg-yellow-500 text-white px-4 py-2 rounded-md hover-effect click-effect button-transition">Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian untuk menghitung luas dan keliling persegi panjang -->
+        <section class="section hidden slide-in" id="persegiPanjangSection">
+            <div class="bg-blue-500 text-white text-center py-6 mt-6 rounded-t-lg">
+                <h3 class="text-xl font-bold">Luas Persegi Panjang</h3>
+            </div>
+            <div class="bg-white p-6 border border-t-0 border-blue-500 rounded-b-lg">
+                <div class="flex justify-center">
+                    <img alt="Persegi Panjang dengan sudut A, B, C dan D" class="mb-4" height="150" src="/assets/p.panjang.webp" width="150" />
+                </div>
+                <p>Rumus Luas Persegi Panjang yaitu :</p>
+                <p class="font-bold mt-2 fade-in text-center">L = P x L</p>
+                <p class="mt-2">Di mana :</p>
+                <p>
+                    L = Luas
+                    <br />
+                    P = Panjang
+                    <br />
+                    L = Lebar
+                </p>
+            </div>
+            <div class="bg-gray-100 p-6 mt-6 rounded-lg">
+                <h3 class="text-xl font-bold text-center">Hitung Luas Persegi Panjang</h3>
+                <div class="flex justify-center mt-4">
+                    <div class="w-full max-w-xs">
+                        <label for="lengthInput" class="block text-sm font-medium text-gray-700">Nilai Panjang</label>
+                        <input id="lengthInput" class="border border-gray-300 rounded-md px-4 py-2 w-full" placeholder="Nilai Panjang" type="text" oninput="validateInput(event)" />
+                        <div class="error-message"></div>
+                        <label for="widthInput" class="block text-sm font-medium text-gray-700 mt-4">Nilai Lebar</label>
+                        <input id="widthInput" class="border border-gray-300 rounded-md px-4 py-2 w-full" placeholder="Nilai Lebar" type="text" oninput="validateInput(event)" />
+                        <div class="error-message"></div>
+                        <div id="rectangleAreaResult" class="mt-4 text-left"></div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-4">
+                    <button onclick="calculateRectangleArea(); addClickAnimation(event)" class="bg-blue-500 text-white px-4 py-2 rounded-md mr-2 hover-effect click-effect button-transition">Hitung</button>
+                    <button onclick="resetRectangleForm(); addClickAnimation(event)" class="bg-yellow-500 text-white px-4 py-2 rounded-md hover-effect click-effect button-transition">Reset</button>
+                </div>
+            </div>
+            <hr class="my-8 border-t-2 border-gray-300">
+            <div class="bg-blue-500 text-white text-center py-6 mt-6 rounded-t-lg">
+                <h3 class="text-xl font-bold">Keliling Persegi Panjang</h3>
+            </div>
+            <div class="bg-white p-6 border border-t-0 border-blue-500 rounded-b-lg">
+                <div class="flex justify-center">
+                    <img alt="Persegi Panjang dengan sudut A, B, C dan D" class="mb-4" height="150" src="/assets/p.panjang.webp" width="150" />
+                </div>
+                <p>Rumus Keliling Persegi Panjang yaitu :</p>
+                <p class="font-bold mt-2 fade-in text-center">K = 2 x (P + L)</p>
+                <p class="mt-2">Di mana :</p>
+                <p>
+                    K = Keliling
+                    <br />
+                    P = Panjang
+                    <br />
+                    L = Lebar
+                </p>
+            </div>
+            <div class="bg-gray-100 p-6 mt-6 rounded-lg">
+                <h3 class="text-xl font-bold text-center">Hitung Keliling Persegi Panjang</h3>
+                <div class="flex justify-center mt-4">
+                    <div class="w-full max-w-xs">
+                        <label for="lengthInputPerimeter" class="block text-sm font-medium text-gray-700">Nilai Panjang</label>
+                        <input id ="lengthInputPerimeter" class="border border-gray-300 rounded-md px-4 py-2 w-full" placeholder="Nilai Panjang" type="text" oninput="validateInput(event)" />
+                        <div class="error-message"></div>
+                        <label for="widthInputPerimeter" class="block text-sm font-medium text-gray-700 mt-4">Nilai Lebar</label>
+                        <input id="widthInputPerimeter" class="border border-gray-300 rounded-md px-4 py-2 w-full" placeholder="Nilai Lebar" type="text" oninput="validateInput(event)" />
+                        <div class="error-message"></div>
+                        <div id="rectanglePerimeterResult" class="mt-4 text-left"></div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-4">
+                    <button onclick="calculateRectanglePerimeter(); addClickAnimation(event)" class="bg-blue-500 text-white px-4 py-2 rounded-md mr-2 hover-effect click-effect button-transition">Hitung</button>
+                    <button onclick="resetRectangleForm(); addClickAnimation(event)" class="bg-yellow-500 text-white px-4 py-2 rounded-md hover-effect click-effect button-transition">Reset</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer bagian bawah halaman -->
+    <footer class="bg-blue-500 text-white text-center py-4 mt-6">
+        <p>Copyright 2025 © All Rights Reserved</p>
+        <p>Made by <span class="text-red-500">❤</span> Kusniadi</p>
+
+        <!-- Link ke script JavaScript eksternal -->
+        <script src="/js/script.js"></script>
+    </footer>
+</body>
+
+</html>

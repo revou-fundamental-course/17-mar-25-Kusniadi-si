@@ -1,0 +1,111 @@
+/* Ini adalah file CSS untuk kalkulator matematik */
+
+/* Animasi untuk efek mengetik */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Kelas untuk efek mengetik */
+.typing {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 8s steps(30, end) infinite;
+}
+
+/* Animasi untuk efek memudar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Kelas untuk efek memudar */
+.fade-in {
+    animation: fadeIn 4s ease-in;
+}
+
+/* Animasi untuk efek slide in */
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Kelas untuk efek slide in */
+.slide-in {
+    animation: slideIn 2s ease-out;
+}
+
+/* Efek hover untuk tombol */
+.hover-effect:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* Efek saat tombol ditekan */
+.click-effect:active {
+    transform: scale(0.95);
+}
+
+/* Kelas untuk tombol aktif */
+.active {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* Kelas untuk tombol tidak aktif */
+.inactive {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+/* Animasi untuk efek klik */
+@keyframes clickAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Kelas untuk animasi klik */
+.click-animation {
+    animation: clickAnimation 0.2s ease-in-out;
+}
+
+/* Transisi untuk tombol */
+.button-transition {
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+/* Efek transisi saat hover */
+.button-transition:hover {
+    transform: translateY(-3px);
+}
+
+/* Efek transisi saat tombol ditekan */
+.button-transition:active {
+    transform: translateY(0);
+}
+
+/* Kelas untuk pesan kesalahan */
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
