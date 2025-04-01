@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katik Kalkulator Matematik</title>
+    
+    <!-- Link untuk font Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link untuk CSS eksternal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Bagian header yang berisi judul aplikasi -->
+    <header>
+        <h1>Katik</h1>
+        <p>Kalkulator Matematik</p>
+    </header>
+    
+    <main>
+        <h2>Welcome to Katik</h2>
+        <p>Hai Sobat, Selamat datang di Katik :)</p>
+        <p>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar.</p>
+        
+        <!-- Tombol untuk memilih jenis bangun datar -->
+        <div class="button-group">
+            <button class="primary active" id="persegiButton">Persegi</button>
+            <button class="secondary" id="panjangButton">P. Panjang</button>
+        </div>
+
+        <!-- Bagian untuk menghitung luas dan keliling persegi -->
+        <section id="persegiSection">
+            <!-- Judul untuk menghitung luas persegi -->
+            <div class="section-title">
+                <h3>Luas Persegi</h3>
+            </div>
+            <div class="content-wrapper">
+                <img alt="Persegi" height="150"
+                    src="assets/persegi.jpg" width="150" />
+                <p>Persegi</p>
+                <div class="formula">
+                    <p>Rumus Luas Persegi yaitu :</p>
+                    <p><strong>L = S x S</strong></p>
+                    <p>Di mana :</p>
+                    <p>L = Luas</p>
+                    <p>S = Sisi</p>
+                </div>
+                <hr />
+                <!-- Input untuk menghitung luas persegi -->
+                <div class="input-section">
+                    <h4>Hitung Luas Persegi</h4>
+                    <input id="sisiInput" placeholder="Nilai Sisi" type="text" />
+                    <div class="result" id="result"></div>
+                    <div class="action-buttons">
+                        <button id="hitungButton">Hitung</button>
+                        <button class="reset" id="resetButton">Reset</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="divider" />
+            <!-- Judul untuk menghitung keliling persegi -->
+            <div class="section-title">
+                <h3>Keliling Persegi</h3>
+            </div>
+            <div class="content-wrapper">
+                <img alt="Persegi" height="150"
+                    src="assets/persegi.jpg" width="150" />
+                <p>Persegi</p>
+                <div class="formula">
+                    <p>Rumus Keliling Persegi yaitu :</p>
+                    <p><strong>K = 4 x S</strong></p>
+                    <p>Di mana :</p>
+                    <p>K = Keliling</p>
+                    <p>S = Sisi</p>
+                </div>
+                <hr />
+                <!-- Input untuk menghitung keliling persegi -->
+                <div class="input-section">
+                    <h4>Hitung Keliling Persegi</h4>
+                    <input id="sisiInputKeliling" placeholder="Nilai Sisi" type="text" />
+                    <div class="result" id="resultKeliling"></div>
+                    <div class="action-buttons">
+                        <button id="hitungButtonKeliling">Hitung</button>
+                        <button class="reset" id="resetButtonKeliling">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian untuk menghitung luas dan keliling persegi panjang -->
+        <section id="panjangSection" style="display: none;">
+            <!-- Judul untuk menghitung luas persegi panjang -->
+            <div class="section-title">
+                <h3>Luas Persegi Panjang</h3>
+            </div>
+            <div class="content-wrapper">
+                <img alt="Persegi Panjang" height="150"
+                    src="assets/p.panjang.webp" width="250" />
+                <p>Persegi Panjang</p>
+                <div class="formula">
+                    <p>Rumus Luas Persegi Panjang yaitu :</p>
+                    <p><strong>L = P x L</strong></p>
+                    <p>Di mana :</p>
+                    <p>L = Luas</p>
+                    <p>P = Panjang</p>
+                    <p>L = Lebar</p>
+                </div>
+                <hr />
+                <!-- Input untuk menghitung luas persegi panjang -->
+                <div class="input-section">
+                    <h4>Hitung Luas Persegi Panjang</h4>
+                    <input id="panjangInput" placeholder="Nilai Panjang" type="text" />
+                    <input id="lebarInput" placeholder="Nilai Lebar" type="text" />
+                    <div class="result" id="resultPanjang"></div>
+                    <div class="action-buttons">
+                        <button id="hitungButtonPanjang">Hitung</button>
+                        <button class="reset" id="resetButtonPanjang">Reset</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="divider" />
+            <!-- Judul untuk menghitung keliling persegi panjang -->
+            <div class="section-title">
+                <h3>Keliling Persegi Panjang</h3>
+            </div>
+            <div class="content-wrapper">
+                <img alt="Persegi Panjang" height="150"
+                    src="assets/p.panjang.webp" width="250" />
+                <p>Persegi Panjang</p>
+                <div class="formula">
+                    <p>Rumus Keliling Persegi Panjang yaitu :</p>
+                    <p><strong>K = 2 x (P + L)</strong></p>
+                    <p>Di mana :</p>
+                    <p>K = Keliling</p>
+                    <p>P = Panjang</p>
+                    <p>L = Lebar</p>
+                </div>
+                <hr />
+                <!-- Input untuk menghitung keliling persegi panjang -->
+                <div class="input-section">
+                    <h4>Hitung Keliling Persegi Panjang</h4>
+                    <input id="panjangInputKeliling" placeholder="Nilai Panjang" type="text" />
+                    <input id="lebarInputKeliling" placeholder="Nilai Lebar" type="text" />
+                    <div class="result" id="resultKelilingPanjang"></div>
+                    <div class="action-buttons">
+                        <button id="hitungButtonKelilingPanjang">Hitung</button>
+                        <button class="reset" id="resetButtonKelilingPanjang">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Bagian footer yang berisi informasi hak cipta dan pembuat -->
+    <footer>
+        <p>Copyright 2025 © All Rights Reserved</p>
+        <p>Made by <span style="color: red;">❤</span> <a href="#">Kusniadi</a></p>
+    </footer>
+
+    <!-- Link untuk JavaScript eksternal -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

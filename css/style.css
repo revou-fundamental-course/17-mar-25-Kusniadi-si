@@ -1,0 +1,340 @@
+/* Ini file CSS Katik */
+
+/* Gaya dasar untuk body */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Gaya untuk header */
+header {
+  background-color: #1e40af;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1.25rem;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: none;
+  width: 0;
+  margin: 0 auto;
+  animation: typing 4s steps(30, end) infinite,
+    blink-caret 0.75s step-end infinite;
+  animation-delay: 0s, 4s;
+}
+
+/* Gaya untuk area konten utama */
+main {
+  max-width: 90%;
+  margin: 2rem auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+main h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+main p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Gaya untuk judul bagian */
+.section-title {
+  background-color: #1e40af;
+  color: white;
+  padding: 2rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-title h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Gaya untuk grup tombol */
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.button-group button {
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.button-group button.secondary {
+  background-color: #e5e7eb;
+  color: #1e40af;
+}
+
+.button-group button:hover {
+  background-color: #3748c4;
+}
+
+.button-group button.secondary:hover {
+  background-color: #d1d5db;
+}
+
+.button-group button:active {
+  transform: scale(0.95);
+}
+
+.button-group button.active {
+  background-color: #1e40af;
+  color: white;
+}
+
+/* Gaya untuk pembungkus konten */
+.content-wrapper {
+  border: 1px solid #1e40af;
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 1rem;
+  margin-top: -1rem;
+  text-align: center;
+  background-color: #f3f4f6;
+}
+
+.content-wrapper img {
+  margin: 1rem 0;
+}
+
+.content-wrapper p {
+  font-size: 1rem;
+  color: black;
+  margin: 0;
+}
+
+/* Gaya untuk bagian formula */
+.formula {
+  text-align: left;
+  margin-top: 1rem;
+  color: black;
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.formula p {
+  margin: 0.5rem 0;
+}
+
+.formula strong {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Gaya untuk garis horizontal */
+hr {
+  border: none;
+  border-top: 1px solid #1e40af;
+  margin: 1rem -1rem;
+}
+
+/* Gaya untuk bagian input */
+.input-section {
+  margin-top: 1rem;
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.input-section h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.input-section input {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.input-section input::-webkit-outer-spin-button,
+.input-section input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-section input:focus {
+  border-color: #fbbf24;
+  outline: none;
+}
+
+/* Gaya untuk bagian hasil */
+.result {
+  margin: 1rem 0;
+  font-size: 1rem;
+  text-align: left;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result strong {
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+}
+
+/* Gaya untuk tombol aksi */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.action-buttons button {
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.action-buttons button.reset {
+  background-color: #fbbf24;
+  color: white;
+}
+
+.action-buttons button:hover {
+  background-color: #3748c4;
+}
+
+.action-buttons button.reset:hover {
+  background-color: #f59e0b;
+}
+
+.action-buttons button:active {
+  transform: scale(0.95);
+}
+
+/* Gaya untuk pembatas */
+.divider {
+  margin: 2rem 0;
+  border: none;
+  border-top: 2px dashed #1e40af;
+}
+
+/* Gaya untuk footer */
+footer {
+  background-color: #1e40af;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+footer p a {
+  color: white;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+/* Keyframes untuk animasi mengetik */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  90% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Keyframes untuk animasi kursor berkedip */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Gaya Responsif */
+@media (max-width: 1024px) {
+  main {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.875rem;
+  }
+}
